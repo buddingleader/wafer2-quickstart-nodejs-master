@@ -5,7 +5,9 @@
         <view class="list-item" bindtap="queryInvoice">
             <button>查询发票信息</button>
         </view>
-        
+        <view class="itemView">
+            <input class="request-text" value="" type="text" placeholder="请输入发票号码" maxlength="140" bindinput="invoiceIDInput" />
+        </view>
         <view class="list-item" wx:if="{{requestResult}}">
             <text class="request-text">{{'请求结果：' + requestResult}}</text>
         </view>

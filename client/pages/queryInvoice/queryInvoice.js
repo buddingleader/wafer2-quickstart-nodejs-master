@@ -6,6 +6,7 @@ var util = require('../../utils/util.js')
 Page({
     data: {
         requestResult: '',
+        invoiceID:'',
         canIUseClipboard: wx.canIUse('setClipboardData')
     },
 
@@ -14,7 +15,10 @@ Page({
         var that = this
         qcloud.request({
             url: `${config.service.host}/weapp/queryi`,
-            login: false,
+            login: true,
+            data: {
+                id: that.data.invoiceID,
+            },
             success (result) {
                 util.showSuccess('请求成功完成')
                 that.setData({
@@ -27,4 +31,11 @@ Page({
             }
         })
     },
+
+     //用户名和密码输入框事件
+  invoiceIDInput:function(e){
+    this.setData({
+        invoiceID:e.detail.value,
+    })
+  },
 })

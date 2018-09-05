@@ -6,10 +6,10 @@ module.exports=ctx=>{
         invoiceCode : '发票代码',
         date : '20180905',
         money : 64.50,
-        creator : `ctx.state.$wxInfo.userinfo`,
+        creator : 'Wang Feifan',
     }
 
-    invoiceMap[invoiceInfo.invoiceID] = invoiceInfo
+    invoiceMap[ctx.req.id] = invoiceInfo
 
-    ctx.state.data = invoiceInfo
+    ctx.state.data = invoiceMap[ctx.req.id]
 }
