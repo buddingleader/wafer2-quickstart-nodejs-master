@@ -32,4 +32,10 @@ router.get('/message', controllers.message.get)
 // POST 用来处理微信转发过来的客服消息
 router.post('/message', controllers.message.post)
 
+// test Cgi
+router.get('/demo',controllers.demo)
+
+// 发票 查询接口
+router.get('/queryi',controllers.queryi)
+
 module.exports = router

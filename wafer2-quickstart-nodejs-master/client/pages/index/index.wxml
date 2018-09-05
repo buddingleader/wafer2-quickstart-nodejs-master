@@ -14,7 +14,7 @@
     </view>
 
 
-    <!-- 上传图片测试 -->
+    <!-- 上传图片测试 
     <view class="uploader">
         <view class="uploader-text" bindtap="doUpload">
             <text>上传图片</text>
@@ -27,13 +27,20 @@
                 bindtap="previewImg"
             ></image>
         </view>
-    </view>
+    </view> -->
 
 
-    <!-- 上传图片测试 -->
+    <!-- 快速增加 CGI 测试 
     <view class="uploader">
         <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
             <text>快速增加 CGI</text>
         </navigator>
-    </view>
+    </view> -->
+
+     <!-- 查询发票信息 测试 -->
+    <view class="uploader">
+        <navigator url="../queryInvoice/queryInvoice" open-type="navigate" class="uploader-text">
+            <text>查询发票信息</text>
+        </navigator>
+    </view> 
 </view>
